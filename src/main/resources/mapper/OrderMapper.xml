@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.lastsunday.cloud.replacetable.mapper.OrderMapper">
+
+    <select id="selectOrder" resultType="com.github.lastsunday.cloud.replacetable.entity.OrderEntity"
+            parameterType="com.github.lastsunday.cloud.replacetable.bo.OrderBO">
+        SELECT id,order_id,order_name FROM order WHERE order_id > 0
+    </select>
+
+</mapper>
